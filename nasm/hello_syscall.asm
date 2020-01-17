@@ -7,12 +7,12 @@ section .text
 global start:
 start:
         mov eax, 4 ; 4=write
-        mov ebx, 1
+        mov ebx, 1 ; 1=stdout
         mov ecx, msg
         mov edx, len
         int 0x80
 
 
         mov eax, 1 ; 1=exit
-        mov ebx, 0        
+        mov ebx, 0 ; 0=no error        
         int 0x80
